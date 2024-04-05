@@ -33,7 +33,7 @@ public class CartItemsController {
 		return cartItemService.specificProduct(id);
 	}
 	
-	@PostMapping("cartItem/{cartId}/add/{productId}")
+	@PostMapping("cart/{cartId}/add/{productId}")
 	public CartItem addCardItem(
 			@RequestBody CartItem cartItem,@PathVariable int cartId, @PathVariable int productId) {
 		return cartItemService.addCardItem(cartItem,cartId,productId);

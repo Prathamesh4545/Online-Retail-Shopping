@@ -13,5 +13,4 @@ public interface CategoryDAO extends JpaRepository<Category, Integer>{
 	@Query("select product from product inner join category on product.categoryId = category.id where category.name=?")
 	Optional<Category> findByName(String name);
 
-
 }

@@ -18,8 +18,12 @@ import com.example.services.OrderService;
 @RequestMapping(name = "order")
 public class OrderController {
 
-	@Autowired
+	final
 	OrderService orderService;
+
+	public OrderController(OrderService orderService) {
+		this.orderService = orderService;
+	}
 
 	@PostMapping("createOrder")
 	public OrderDB createOrderDB(@RequestBody OrderDB orderDB) {

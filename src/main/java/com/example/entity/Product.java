@@ -40,7 +40,7 @@ public class Product {
 
 	@ManyToOne
 	@JoinColumn(name = "categoryId")
-//	This is another method to handel json parsing
+//	This is another method to handle json parsing
 //	@JsonBackReference
 	private Category category;
 	
@@ -53,7 +53,6 @@ public class Product {
 
 	public void assignTo(Category category) {
 		this.category = category;
-
 	}
 
 
